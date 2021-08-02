@@ -211,10 +211,10 @@ cfd.tabulate(conditions=genres, samples=modals)
 from nltk.corpus import inaugural
 
 x = [(target, fileid[:4])
-				for fileid in inaugural.fileids()
-				for w in inaugural.words(fileid)
-				for target in ['america', 'citizen']
-				if w.lower().startswith(target)]
+	for fileid in inaugural.fileids()
+	for w in inaugural.words(fileid)
+	for target in ['america', 'citizen']
+	if w.lower().startswith(target)]
 len(x)
 list(x)
 
