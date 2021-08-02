@@ -74,7 +74,7 @@ sorted(w for w in set(text) if len(w) > 7 and fdist[w] > 7)
 
 - n-gram : unigram (n=1), bigram (n=2), trigram (n=3)
 
- >> contiguous sequence of n items from a given sample of text 
+ ** contiguous sequence of n items from a given sample of text 
 
 ( * collocation : A sequence of words or terms that co-occur more often than would be expected by chance)
 
@@ -123,31 +123,30 @@ inaugural.paras('1789-Washington.txt')
 
 - 데이터에 포함된 파일 분석
 
->> fileids() : The files of the corpus
+** fileids() : The files of the corpus
 
->> fileids([categories]) : The files of the corpus corresponding to these categories
+** fileids([categories]) : The files of the corpus corresponding to these categories
 
->> categories() : The categories of the corpus
+** categories() : The categories of the corpus
 
->> categories([fileids]) : The categories of the corpus corresponding to these files
+** categories([fileids]) : The categories of the corpus corresponding to these files
 
->> raw() : The raw content of the corpus
+** raw() : The raw content of the corpus
 
->> raw(fileids=f1, f2, f3]) : The raw content of the specified files
+** raw(fileids=f1, f2, f3]) : The raw content of the specified files
 
->> raw(categories=[c1, c2]) : The raw content of specified categories
+** raw(categories=[c1, c2]) : The raw content of specified categories
+	→ words(), sents()에서 같은 방식으로 적용
 
-                                     → words(), sents()에서 같은 방식으로 적용
+** abspath(fileid) : The location of the given file on disk
 
->> abspath(fileid) : The location of the given file on disk
+** encoding(fileid) : The encoding of the file (if known)
 
->> encoding(fileid) : The encoding of the file (if known)
+** open(fileid) : Open a stream for reading the given corpus file
 
->> open(fileid) : Open a stream for reading the given corpus file
+** root() : The path to the root of locally installed corpus
 
->> root() : The path to the root of locally installed corpus
-
->> readme() : The contents of the README file of the corpus
+** readme() : The contents of the README file of the corpus
 
 ```python
 from nltk.corpus import gutenberg
@@ -343,7 +342,7 @@ cfd['living']
 
 - Lexial Resources : 언어 지식 능력 측정
 
->> Stop words : 추가 처리 전, filtering 할 high frequency words (e.g. the, to) 
+** Stop words : 추가 처리 전, filtering 할 high frequency words (e.g. the, to) 
 
 ```python
 from nltk.corpus import stopwords
@@ -394,9 +393,9 @@ for synset in wn.synsets('car'):
 wn.lemmas('car')
 ```
 
->> hypernym : 상위어 ↔ hyponym : 하위어
+** hypernym : 상위어 ↔ hyponym : 하위어
 
->> holonym : 전체어 ↔ meronym : 부분어
+** holonym : 전체어 ↔ meronym : 부분어
 
 ```python
 motorcar = wn.synset('car.n.01')
@@ -415,7 +414,7 @@ len(holo)
 
 ```
 
->> stem word
+** stem word
 
 ```python
 from nltk.stem import WordNetLemmatizer
